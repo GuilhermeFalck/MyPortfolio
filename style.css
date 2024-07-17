@@ -1,0 +1,165 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-primary: "Poppins", sans-serif;
+
+  --bg-color: #2f3e2f;
+  --bg2-color: #3b4d3b;
+  --text-color: #e8edc1;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg2-color);
+  color: var(--text-color);
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+#app {
+  height: 100vh;
+  margin: 3px;
+}
+
+/*---Header---*/
+
+#hero-first {
+  background-color: var(--bg-color);
+  height: fit-content;
+  padding: 2rem;
+  border-radius: 0 0 8rem 8rem;
+}
+
+#header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header a img {
+  width: 4rem;
+  height: 4rem;
+  color: var(--text-color);
+}
+
+#emailCopy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg2-color);
+  padding: 5px;
+  border-radius: 5rem;
+}
+
+#emailCopy button {
+  background-color: var(--text-color);
+  padding: 5px;
+  border: none;
+  border-radius: 5rem;
+  width: 7rem;
+  cursor: pointer;
+  transition: ease-in-out;
+  transition: 1s;
+  color: black;
+}
+
+#emailCopy button:hover {
+  background-color: #d3dc96;
+}
+
+#emailCopy p {
+  font-size: 1rem;
+  margin-right: 1rem;
+  padding-left: 1rem;
+}
+
+/*---About---*/
+
+/*Image*/
+.imgMe {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border: var(--text-color) 5px solid;
+}
+
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile-container .name {
+  position: absolute;
+  bottom: 0;
+  background-color: var(--bg2-color);
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+  transform: translateY(50%);
+  width: 18rem;
+}
+
+/*About-text*/
+
+#header-about {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#header-about-text {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+}
+
+#header-about-text h1 {
+  text-align: center;
+  font-weight: 600; /* Para o texto "Building digital" */
+  line-height: 1.2;
+}
+
+#header-about-text p {
+  margin-top: 5rem;
+  text-align: center;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+#repos-github {
+  background-color: var(--text-color);
+  padding: 2rem;
+  border: none;
+  border-radius: 5rem;
+  width: 20rem;
+  cursor: pointer;
+  transition: ease-in-out 1s;
+  margin: 3rem 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#repos-github img {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem; /* Ajusta a margem conforme necessário */
+}
+
+#repos-github a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit; /* Ajusta a cor conforme necessário */
+  color: black;
+}
