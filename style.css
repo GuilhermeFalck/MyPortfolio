@@ -64,8 +64,7 @@ body * {
   border-radius: 5rem;
   width: 7rem;
   cursor: pointer;
-  transition: ease-in-out;
-  transition: 1s;
+  transition: ease-in-out 1s;
   color: black;
 }
 
@@ -121,19 +120,17 @@ body * {
   display: flex;
   flex-direction: column;
   margin-top: 5rem;
-}
-
-#header-about-text h1 {
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   text-align: center;
-  font-weight: 600; /* Para o texto "Building digital" */
-  line-height: 1.2;
 }
 
+#header-about-text h1,
 #header-about-text p {
-  margin-top: 5rem;
-  text-align: center;
-  font-weight: 300;
-  line-height: 1.2;
+  width: 100%;
+  padding: 0 1rem;
 }
 
 #repos-github {
@@ -160,6 +157,220 @@ body * {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: inherit; /* Ajusta a cor conforme necessário */
   color: black;
+}
+
+/*Technologies*/
+
+#hero-technologies {
+  background-color: var(--bg2-color);
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  border-radius: 0 0 8rem 8rem;
+}
+
+#hero-technologies h1 {
+  text-align: center;
+  font-weight: 600; /* Para o texto "Building digital" */
+  line-height: 1.2;
+}
+
+/* Ajuste para exibir 2 tecnologias por linha */
+#technologies {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#technologies img {
+  width: calc(50% - 1rem);
+  max-width: 15rem;
+}
+
+/*---hero-services---*/
+
+#hero-services {
+  background-color: var(--bg-color);
+  padding: 7rem 1rem;
+  text-align: center;
+  border-radius: 8rem 8rem 0 0;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 3rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--bg2-color);
+}
+
+.divider-label {
+  background: var(--bg2-color);
+  padding: 1rem;
+  border-radius: 50px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  transform: rotate(-10deg);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/*Services*/
+
+#services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#services-div {
+  margin-top: 5rem;
+  width: 30rem;
+}
+
+#services img {
+  width: 8rem;
+  height: 8rem;
+}
+
+/*--- Media Queries ---*/
+/* Tablets and medium devices */
+@media (min-width: 768px) {
+  :root {
+    font-size: 56.25%; /* Increase base font-size */
+  }
+
+  #header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  #header-about-text {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+  }
+
+  #emailCopy {
+    flex-direction: row;
+  }
+
+  #emailCopy p {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  #repos-github {
+    width: auto;
+  }
+
+  #repos-github img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  #hero-technologies {
+    margin: 3rem 0;
+  }
+
+  #technologies {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: space-between;
+    padding: 0 5rem;
+    margin-bottom: 3rem;
+  }
+
+  #technologies img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .profile-container .name {
+    width: 18rem;
+  }
+}
+
+/* Desktops and large devices */
+@media (min-width: 1024px) {
+  :root {
+    font-size: 62.5%; /* Increase base font-size */
+  }
+
+  #header-about-text {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #header-about-text h1 {
+    font-size: 2.4rem;
+  }
+
+  #header-about-text p {
+    font-size: 1.6rem;
+    margin-top: 0;
+  }
+
+  #repos-github {
+    padding: 2rem;
+    width: 20rem;
+  }
+
+  #repos-github img {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  #technologies {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+    justify-content: space-between;
+    padding: 0 5rem;
+    margin-bottom: 3rem;
+  }
+
+  #technologies img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  #services {
+    padding: 0 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
+
+  #services-div {
+    margin-top: 5rem;
+    width: 30rem;
+  }
+
+  #services-div h2 {
+    margin-top: 2rem;
+  }
+
+  #services img {
+    width: 8rem;
+    height: 8rem;
+  }
 }
