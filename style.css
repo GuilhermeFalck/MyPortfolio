@@ -70,8 +70,8 @@ body * {
   border-radius: 5rem;
   width: 7rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   color: black;
+  transition: background-color 1s ease;
 }
 
 #emailCopy button:hover {
@@ -264,6 +264,14 @@ body * {
 }
 
 /*---Hero-Projects---*/
+
+#hero-projects {
+  background-color: var(--bg2-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 7rem 1rem;
+}
 
 /*--- Media Queries ---*/
 /* Tablets and medium devices */
