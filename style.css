@@ -473,4 +473,67 @@ body * {
     width: 8rem;
     height: 8rem;
   }
+
+  .carousel-container {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    transition: opacity 1s;
+  }
+
+  .carousel-item.active {
+    opacity: 1;
+  }
+
+  .carousel-item {
+    opacity: 0;
+  }
+
+  .carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .carousel-control.prev {
+    left: 0.625rem;
+  }
+
+  .carousel-control.next {
+    right: 0.625rem;
+  }
+
+  .project img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+  }
+
+  .project {
+    align-items: center;
+    text-align: center;
+  }
 }
