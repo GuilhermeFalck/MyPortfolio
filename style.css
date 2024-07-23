@@ -70,11 +70,11 @@ body * {
   width: 7rem;
   cursor: pointer;
   color: black;
-  transition: background-color 1s ease;
+  transition: background-color 0.3s ease;
 }
 
 #emailCopy button:hover {
-  background-color: #d3dc96;
+  background-color: #cfde73;
 }
 
 #emailCopy p {
@@ -441,6 +441,9 @@ body * {
     display: flex;
     flex-direction: row;
     margin-top: 5rem;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
   }
 
   #emailCopy {
@@ -452,11 +455,11 @@ body * {
     margin-bottom: 0;
   }
 
-  #repos-github {
+  .repos-github {
     width: auto;
   }
 
-  #repos-github img {
+  .repos-github img {
     width: 2rem;
     height: 2rem;
   }
@@ -479,7 +482,7 @@ body * {
   }
 
   #services {
-    padding: 0 5rem 0 5rem;
+    padding: 0 5rem;
     display: flex;
     flex-direction: row;
     gap: 5rem;
@@ -512,13 +515,83 @@ body * {
     flex: 1;
   }
 
-  #services-div h2 {
+  .services-div h2 {
     margin-top: 3rem;
   }
 
-  #services img {
+  .services-div img {
     width: 8rem;
     height: 8rem;
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    transition: opacity 1s;
+  }
+
+  .carousel-item.active {
+    opacity: 1;
+  }
+
+  .carousel-item {
+    opacity: 0;
+  }
+
+  .carousel-control {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .carousel-control.prev {
+    left: 1.5rem;
+  }
+
+  .carousel-control.next {
+    right: 1.5rem;
+  }
+
+  .project img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    border: var(--bg-color) 10px solid;
+  }
+
+  .project {
+    align-items: center;
+    text-align: center;
   }
 }
 

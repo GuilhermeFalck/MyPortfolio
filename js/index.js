@@ -1,4 +1,5 @@
 import { nextSlide, prevSlide } from "./carousel.js";
+import "./emailCopy.js";
 
 // Vincula os botões às funções
 document.addEventListener("DOMContentLoaded", () => {
