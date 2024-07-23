@@ -7,7 +7,6 @@
 :root {
   font-size: 62.5%;
   --ff-primary: "Poppins", sans-serif;
-
   --bg-color: #2f3e2f;
   --bg2-color: #3b4d3b;
   --text-color: #e8edc1;
@@ -139,36 +138,40 @@ body * {
   padding: 0 1rem;
 }
 
-#repos-github {
+.repos-github {
   background-color: var(--text-color);
   padding: 2rem;
   border: none;
   border-radius: 5rem;
-  width: 20rem;
+  width: 21rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  margin: 3rem 0 5rem;
+  margin: 5rem 0 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none; /* Remover sublinhado */
+  color: black; /* Cor do texto */
+  font-size: 1.4rem; /* Tamanho do texto */
 }
 
-#repos-github:hover {
+.repos-github:hover {
   background-color: #d3dc96;
   transform: scale(1.05);
 }
 
-#repos-github img {
+.repos-github img {
   width: 2rem;
   height: 2rem;
   margin-left: 1rem;
 }
 
-#repos-github a {
+.repos-github a {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  color: black;
+  text-decoration: none; /* Certifique-se de que isso esteja presente */
+  color: inherit; /* Herdar a cor do link pai */
+  font-size: inherit; /* Herdar o tamanho da fonte do link pai */
 }
 
 /*Technologies*/
@@ -264,13 +267,13 @@ body * {
 }
 
 /*---Hero-Projects---*/
-
 #hero-projects {
   background-color: var(--bg2-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 2rem 1rem;
+  margin-bottom: 3rem;
 }
 
 .projects {
@@ -287,6 +290,139 @@ body * {
 
 .project img {
   width: 40rem;
+  margin-top: 3rem;
+}
+
+/*Hero-Contact*/
+
+#hero-contact {
+  background-color: var(--bg-color);
+  border-radius: 8rem 8rem 0 0;
+  padding: 2rem;
+}
+
+.divider-footer {
+  width: 100%;
+  height: 1px;
+  background-color: var(--bg2-color);
+  margin: 20px auto;
+}
+
+/*Contact*/
+
+.contact-text {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+  background: var(--bg2-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fading-image {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.image-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(
+    to bottom,
+    var(--bg2-color) 0%,
+    var(--bg-color) 100%
+  );
+  z-index: 1;
+}
+
+.contact-text h1 {
+  margin-top: 3rem;
+}
+
+.contact-buttons {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contact-buttons a {
+  background-color: var(--text-color);
+  padding: 2rem;
+  border: none;
+  border-radius: 5rem;
+  width: 21rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin: 5rem 0 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Adicione isso */
+  color: black; /* Certifique-se de definir a cor do texto */
+}
+
+.contact-buttons a:hover {
+  background-color: #d3dc96;
+  transform: scale(1.05);
+}
+
+.contact-buttons button img {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 1rem;
+}
+
+.contact-buttons button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: transparent;
+  border: transparent;
+  color: black;
+}
+
+/*Copyright*/
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.copyright a img {
+  width: 4rem;
+  height: 4rem;
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.copyright a img:hover {
+  transform: scale(1.1);
+}
+
+/* Hide navigation buttons on screens smaller than 1024px */
+.carousel-control {
+  display: none;
 }
 
 /*--- Media Queries ---*/
@@ -392,88 +528,6 @@ body * {
     font-size: 62.5%;
   }
 
-  #header-about-text {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5rem;
-    gap: 3rem;
-    align-items: center;
-    justify-content: center;
-  }
-
-  #header-about-text h1 {
-    font-size: 2.4rem;
-  }
-
-  #header-about-text p {
-    font-size: 1.6rem;
-    margin-top: 0;
-  }
-
-  #repos-github {
-    padding: 2rem;
-    width: 20rem;
-  }
-
-  #repos-github img {
-    width: 2rem;
-    height: 2rem;
-  }
-
-  .technologies {
-    margin-top: 3rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
-    padding: 0 5rem;
-    margin-bottom: 3rem;
-  }
-
-  .technologies img {
-    width: 8rem;
-    height: 8rem;
-  }
-
-  #services {
-    padding: 0 5rem 0 5rem;
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
-  }
-
-  .services-div {
-    display: flex;
-    flex-direction: column;
-    height: 40rem;
-    width: 40rem;
-  }
-
-  .div-img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 50%;
-    flex: 1;
-  }
-
-  .div-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50%;
-    flex: 1;
-  }
-
-  #services-div h2 {
-    margin-top: 3rem;
-  }
-
-  #services img {
-    width: 8rem;
-    height: 8rem;
-  }
-
   .carousel-container {
     position: relative;
     width: 70%;
@@ -507,29 +561,36 @@ body * {
   }
 
   .carousel-control {
+    display: block;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 1.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .carousel-control.prev {
-    left: 0.625rem;
+    left: 1.5rem;
   }
 
   .carousel-control.next {
-    right: 0.625rem;
+    right: 1.5rem;
   }
 
   .project img {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 3rem;
+    border: var(--bg-color) 10px solid;
   }
 
   .project {

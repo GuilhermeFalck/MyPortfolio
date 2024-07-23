@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio</title>
     <link rel="stylesheet" href="style.css" />
+    <script defer type="module" src="./js/index.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
@@ -63,18 +64,18 @@
               primeira oportunidade como desenvolvedor no mercado de trabalho.
             </p>
           </div>
-          <button id="repos-github">
-            <a
-              target="_blank"
-              href="https://github.com/GuilhermeFalck?tab=repositories"
-            >
-              Últimos repositórios
-              <img
-                id="repos-svg"
-                src="./assets/icons/repos.svg"
-                alt="Repositórios GitHub"
-            /></a>
-          </button>
+          <a
+            target="_blank"
+            href="https://github.com/GuilhermeFalck?tab=repositories"
+            class="repos-github"
+          >
+            <span>Últimos repositórios</span>
+            <img
+              id="repos-svg"
+              src="./assets/icons/repos.svg"
+              alt="Repositórios GitHub"
+            />
+          </a>
         </div>
       </div>
       <div id="hero-technologies">
@@ -149,9 +150,7 @@
           <h1>Projetos Pessoais</h1>
         </div>
         <div class="carousel-container">
-          <button class="carousel-control prev" onclick="prevSlide()">
-            &#10094;
-          </button>
+          <button class="carousel-control prev">&#10094;</button>
           <div class="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -249,9 +248,50 @@
               </div>
             </div>
           </div>
-          <button class="carousel-control next" onclick="nextSlide()">
-            &#10095;
-          </button>
+          <button class="carousel-control next">&#10095;</button>
+        </div>
+      </div>
+      <div id="hero-contact">
+        <div class="contact-text">
+          <div class="image-wrapper">
+            <img
+              src="./assets/icons/hands.svg"
+              alt="Handshake Image"
+              class="fading-image"
+            />
+          </div>
+          <h1>
+            Vamos revolucionar a tecnologia juntos? <br />
+            Entre em contato comigo!
+          </h1>
+        </div>
+
+        <div class="contact-buttons">
+          <a href="mailto:guilhermefalck22@gmail.com"><button>Email</button></a>
+          <a href="https://api.whatsapp.com/send?phone=11957472311"
+            ><button>WhatsApp</button></a
+          >
+        </div>
+        <div class="divider-footer"></div>
+        <div id="hero-footer">
+          <div class="copyright">
+            <div>© Todos os direitos reservados</div>
+            <div>
+              <a
+                href="https://drive.google.com/file/d/1fECkCyZ1y2oPascybU5Uv0K69wWtBxip/view?usp=sharing"
+                target="_blank"
+                ><img src="./assets/icons/cv.svg" alt="Currículo"
+              /></a>
+              <a target="_blank" href="https://github.com/GuilhermeFalck"
+                ><img src="./assets/icons/github.svg" alt="Github"
+              /></a>
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/guilherme-falck-do-carmo/"
+                ><img src="./assets/icons/linkedin.svg" alt="Linkedin"
+              /></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
